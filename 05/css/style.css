@@ -53,17 +53,54 @@ h1 {
    width: 33%;
 }
 
+/* :: SHARED */
+
+.red {
+  background-color: #8d0026;
+}
+
+.blue {
+  background-color: #325999;
+}
+
+.orange {
+  background-color: #c9520e;
+}
+
+.green {
+  background-color: #568033;
+}
+
+.yellow {
+  background-color: #eec92f;
+}
+
+.purple {
+  background-color: #3c2d68;
+}
+
+
+/* :: OVERWHELMED */
+
+.overwhelmed .color__band {
+  width: calc(100%/46);
+  height: 100%;
+}
+
+
+/* :: CALM */
 
 .calm {
+  background: transparent;
+  height: 70vh;
+}
+
+.calm__circle {
    background: turquoise;
    border-radius: 50vh;
    height: 5vh;
    width: 5vh;
 }
-
-
-
-
 
 
 @-webkit-keyframes pulse--custom {
@@ -105,4 +142,65 @@ h1 {
   animation-name: pulse--custom;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
+}
+
+
+
+/* :: OPTIMISTIC */
+
+.optimistic {
+  background: rgb(238,174,202);
+  background: -moz-linear-gradient(45deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: linear-gradient(45deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+  height: 75vh;
+  overflow: hidden;
+}
+
+.optimistic__circle {
+  background: rgb(148,187,233);
+  background: -moz-linear-gradient(45deg, rgba(148,187,233,1) 0%, rgba(238,174,202,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(148,187,233,1) 0%, rgba(238,174,202,1) 100%);
+  background: linear-gradient(45deg, rgba(148,187,233,1) 0%, rgba(238,174,202,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#94bbe9",endColorstr="#eeaeca",GradientType=1);
+  border-radius: 30vh;
+  height: 30vh;
+  width: 30vh;
+}
+
+
+@-webkit-keyframes fadein-custom {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100vw, 0, 0);
+    transform: translate3d(100vw, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(-100vw, 0, 0);
+    transform: translate3d(-100vw, 0, 0);
+  }
+}
+
+@keyframes fadein-custom {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100vw, 0, 0);
+    transform: translate3d(100vw, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(-100vw, 0, 0);
+    transform: translate3d(-100vw, 0, 0);
+  }
+}
+
+.fadein-custom {
+  -webkit-animation-name: fadein-custom;
+  animation-name: fadein-custom;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
 }
