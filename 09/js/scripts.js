@@ -41,7 +41,8 @@
       // c key for circle
       const circle = document.createElement('div');
       circle.className = 'circle';
-      circle.style.left = `${coordinates.x}px`;
+      // circle.style.left = coordinates.x + 'px;'; // same as next
+      circle.style.left = `${coordinates.x}px`; // string notation
       circle.style.top = `${coordinates.y}px`;
       circle.style.backgroundColor = helpers.generateRandomColorString();
       document.body.appendChild(circle);
@@ -90,7 +91,7 @@
   }
 
   const getPhrase = function () {
-    const exclamations = ['Wow!', 'Neat!', 'Incredible!', 'JavaScript rules!', 'Bravo!', 'Fantastic!'];
+    const exclamations = ['Wow!', 'Neat!', 'Incredible!', 'JavaScript rules!', 'Bravo!', 'Fantastic!', 'Creative Computing'];
     const index = Math.floor(Math.random() * exclamations.length);
     return exclamations[index];
   }
@@ -114,6 +115,7 @@
       return { x, y };
     },
 
+    // helpers.generateRandomColorString()
     generateRandomColorString: (alpha = true) => {
       // random RBG values
       const r = Math.floor(Math.random() * 255);
