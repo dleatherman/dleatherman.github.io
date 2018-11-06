@@ -5,6 +5,12 @@
 
   let counter = 0;
 
+  const object = {
+    key: value,
+    name: name,
+    size: size
+  }
+
   // Save this for later use
   const originalHTML = document.body.innerHTML;
   let messageWrapper = document.getElementById('message');
@@ -42,8 +48,12 @@
       const circle = document.createElement('div');
       circle.className = 'circle';
       // circle.style.left = coordinates.x + 'px;'; // same as next
-      circle.style.left = `${coordinates.x}px`; // string notation
-      circle.style.top = `${coordinates.y}px`;
+      circle.style.position = 'absolute';
+      circle.style.fontFamily = 'Helvetica';
+      circle.style.left = Math.floor(Math.random() * window.innerWidth) + 'px';
+      circle.style.top = Math.floor(Math.random() * window.innerHeight) + 'px';
+      // circle.style.left = `${coordinates.x}px`; // string notation
+      // circle.style.top = `${coordinates.y}px`;
       circle.style.backgroundColor = helpers.generateRandomColorString();
       document.body.appendChild(circle);
 
@@ -59,6 +69,7 @@
       dog.style.top = `${coordinates.y}px`;
       dog.style.transform = `-webkit-rotate(${degreesRotation}deg)`;
       dog.style.transform = `rotate(${degreesRotation}deg)`;
+      // dog.style.transform = 'rotate(' + Math.floor(Math.random() * 360) + 'deg)';
       document.body.appendChild(dog);
 
     } else if (keyCodePressed === 65) {
@@ -103,7 +114,7 @@
   // This object contains helper functions
   const helpers = {
 
-    removeClass: (cssClass) => {
+    removeClass: function (cssClass) {
       if (document.body.classList.contains(cssClass)) {
         document.body.classList.remove(cssClass);
       }
@@ -128,6 +139,13 @@
       }
 
       return `rgba(${r},${g},${b},${a})`;
+    },
+
+    playSoundFunction: function () {
+      // Play sound
+    },
+    playSound: () => {
+      // Play sound
     }
 
   }
