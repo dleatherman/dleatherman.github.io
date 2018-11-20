@@ -49,6 +49,9 @@ Of note:
 - ID's should only be used once `<form id="contactForm"></form>`
 - You can add multiple classes to a single dom element seperated by a space: `<button class="blue button big"></button>`
 
+
+----
+
 ### 2. CSS [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 CSS is the styling and presentational layer, it adds visual richness to the page on top of the structural base of HTML.
@@ -100,6 +103,10 @@ section {
 }
 ```
 
+----
+
 ### 3. JavaScript [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 Making an HTML page interactive requires Javascript. Using event listeners, functions, variables, we have a technology that can traverse through the DOM and we can listen for events and respond to them using JavaScript.
+
+- 
