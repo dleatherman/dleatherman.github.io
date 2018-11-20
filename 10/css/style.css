@@ -21,5 +21,28 @@ section {
 #section-2 {
   background: lemonchiffon;
   color: #000;
+  position: relative;
   transition: background-color 3s ease-in-out;
+}
+
+.circle {
+  animation: move 5s infinite alternate ease-in-out;
+  background: hotpink;
+  border-radius: 50px;
+  height: 100px;
+  position: absolute;
+  width: 100px;
+}
+
+@keyframes move {
+  from {
+    background: hotpink;
+    top: 0;
+    left: 0;
+  }
+  to {
+    background: limegreen;
+    top: -200;
+    left: -200;
+  }
 }
