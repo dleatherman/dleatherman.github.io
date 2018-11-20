@@ -109,4 +109,60 @@ section {
 
 Making an HTML page interactive requires Javascript. Using event listeners, functions, variables, we have a technology that can traverse through the DOM and we can listen for events and respond to them using JavaScript.
 
-- 
+- Structure
+- Defining Variables
+  - let : can change throughout the program
+  - const : constant, does not change, but is singly defined and it's use does not mutate/change it
+  - var : catch all, would stay away from this as it's not a best practice
+- Data Types
+  - Number : any integer
+  - String : anything in quotes, or 
+  - Striing literal : anything using back ticks. You can also use variables directly in these strings. e.g. `` `This is ${exclamation}` ``
+  - Infinity : causes infiniite loop and will eventually lock the browser
+  - Boolean : true (1) or false (0)
+  - undefined : not yet used
+  - Objects : contain key value pairs
+```
+const person = {
+  firstName: Dan,
+  lastName: Leatherman
+};
+```
+  - Arrays
+```
+const kids = ["Simon", "Leo", "Willa"];
+```
+- Operators
+  - Math with numbers
+  - Math with strings
+- Comparisons
+  - Greater than `>`
+  - Less than `<`
+  - Equals
+    - `==` fuzzy match, strings can match numbers, etc.
+    - `===` exact match of type and value
+  - Not Equals
+    - `!=` fuzzy match
+    - `!==` exact match
+- Interaction
+  - Alert : `alert('message')`
+  - Prompt : `prompt('message', callback)`
+  - Confirm : `confirm('confirm you want to do this?', callback)`
+- Conditionals
+```
+if (true) {
+  // execute this code
+}
+```
+```
+if (false) {
+  // do this
+} else if (true) {
+  // do this instead
+}
+```
+  - Logical operators
+- Loops
+- Switch Statements
+- Functions
+  - returns
