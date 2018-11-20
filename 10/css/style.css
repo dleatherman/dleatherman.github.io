@@ -14,8 +14,17 @@ img {
 section {
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
+}
+
+p {
+  letter-spacing: -0.5em;
+  line-height: 1;
+  margin: 0 auto;
+  max-width: 500px;
+  opacity: 0.1;
 }
 
 #section-2 {
@@ -45,4 +54,16 @@ section {
     top: -200;
     left: -200;
   }
+}
+
+#section-3 p {
+  transition: all 3s ease-out;
+}
+
+#section-3 p.active {
+  color: blue;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  opacity: 1;
 }

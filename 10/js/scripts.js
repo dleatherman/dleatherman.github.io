@@ -41,4 +41,12 @@ window.onload = function () {
       el.style.backgroundColor = 'lemonchiffon';
     })
 
+  inView('#section-3 p')
+    .on('enter', el => {
+      el.className = 'active blue';
+    })
+    .on('exit', el => {
+      el.className = '';
+    })
+
 };
