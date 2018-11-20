@@ -16,7 +16,7 @@ window.onload = function () {
     console.log('did something');
   };
 
-  inView('#section-2 h1')
+  inView('#section-2')
     .on('enter', doSomething)
 
 };
