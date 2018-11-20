@@ -1,13 +1,18 @@
 
 // Runs after all content is loaded on the page
-(function (inView) {
+// (function (inView) {
 
+//   const doSomething = function () {
+//     console.log('did something');
+//   };
 
-  // .on('exit', el => {
-  //   el.style.opacity = 0.5;
-  // });
+//   inView('#section-2')
+//     .on('enter', doSomething)
+//   // .on('enter', el => {
+//   //   el.style.backgroundColor = 'blue';
+//   // })
 
-}(inView));
+// })(inView);
 
 // does the same thing as the above ^^
 window.onload = function () {
@@ -17,6 +22,11 @@ window.onload = function () {
   };
 
   inView('#section-2')
-    .on('enter', doSomething)
+    .on('enter', el => {
+      el.style.backgroundColor = 'blue';
+    })
+    .on('exit', el => {
+      el.style.backgroundColor = 'lemonchiffon';
+    })
 
 };
