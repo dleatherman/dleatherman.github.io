@@ -31,6 +31,8 @@ window.onload = function () {
       circle.className = 'circle';
       circle.style.left = Math.floor(Math.random() * window.innerWidth) + 'px';
       circle.style.top = Math.floor(Math.random() * window.innerHeight) + 'px';
+      // Random animation duration between 0-10s
+      circle.style.animationDuration = Math.floor(Math.random() * 10) + 's';
       el.appendChild(circle);
 
       el.style.backgroundColor = 'blue';
@@ -41,8 +43,9 @@ window.onload = function () {
       el.style.backgroundColor = 'lemonchiffon';
     })
 
+  // Global offset for all inview elements
   inView.offset({
-    bottom: 250
+    bottom: 100
   })
 
   inView('#section-3 p')
