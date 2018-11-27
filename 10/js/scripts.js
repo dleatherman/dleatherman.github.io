@@ -50,7 +50,7 @@ window.onload = function () {
 
   inView('#section-3 p')
     .on('enter', el => {
-      el.className = 'active blue';
+      el.className = 'active';
     })
     .on('exit', el => {
       el.className = '';
