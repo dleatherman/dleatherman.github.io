@@ -1,0 +1,49 @@
+html, body {
+   background: #000;
+   color: #fff;
+   font-family: 'Karla', sans-serif;
+   font-size: 16px;
+   height: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  opacity: 0;
+  position:relative;
+  transition: opacity 1s 500ms ease-in-out;
+}
+
+section.active {
+  opacity: 1;
+}
+
+section p {
+  transition: all 2s ease-in;
+  position: absolute;
+}
+
+section.active p {
+  animation: move 1s infinite alternate ease-out;
+}
+
+@keyframes move {
+  from {
+    background: hotpink;
+    top: 0;
+    left: 0;
+  }
+  to {
+    background: limegreen;
+    top: -500;
+    left: -500;
+  }
+}
