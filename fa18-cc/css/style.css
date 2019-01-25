@@ -21,6 +21,22 @@ a {
    text-decoration: none;
 }
 
+.container {
+  align-content: center;
+  display: flex;
+  justify-items: center;
+  height: 100%;
+}
+
+ul {
+  align-content: center;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
 ul, ol {
    list-style-type: none;
    margin: 0;
@@ -30,4 +46,5 @@ ul, ol {
 ul > li,
 ol > li {
   margin-top: 1rem;
+  width: 100%;
 }

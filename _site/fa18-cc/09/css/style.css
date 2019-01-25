@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+
+html, body {
+  color: #fff;
+  font-family: 'Karla', sans-serif;
+  font-size: 92px;
+  height: 100%;
+  text-align: center;
+}
+
+body {
+  background: #000;
+}
+
+img {
+   height: auto;
+   max-width: 100%;
+}
+
+#message {
+  position: relative;
+}
+
+.dog {
+  height: auto;
+  max-width: 268px;
+  position: absolute;
+}
+
+.circle {
+  border-radius: 50px;
+  height: 100px;
+  position: absolute;
+  width: 100px;
+}
+
+.phrase {
+  font-family: 'Architects Daughter', cursive;
+  position: absolute;
+}
+
+.animated {
+  -webkit-animation: colorchange 5s infinite;
+  animation: colorchange 5s infinite;
+}
+
+
+@keyframes colorchange
+{
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: blue;}
+  75%  {background: green;}
+  100% {background: red;}
+}
+
+@-webkit-keyframes colorchange
+{
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: blue;}
+  75%  {background: green;}
+  100% {background: red;}
+}

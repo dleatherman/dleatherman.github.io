@@ -1,0 +1,69 @@
+html, body {
+   background: #000;
+   color: #fff;
+   font-family: 'Karla', sans-serif;
+   font-size: 16px;
+   height: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+p {
+  letter-spacing: -0.5em;
+  line-height: 1;
+  margin: 0 auto;
+  max-width: 500px;
+  opacity: 0;
+}
+
+#section-2 {
+  background: lemonchiffon;
+  color: #000;
+  position: relative;
+  transition: background-color 3s ease-in-out;
+}
+
+.circle {
+  animation: move 5s infinite alternate ease-in-out;
+  background: hotpink;
+  border-radius: 50px;
+  height: 100px;
+  position: absolute;
+  width: 100px;
+}
+
+@keyframes move {
+  from {
+    background: hotpink;
+    top: 0;
+    left: 0;
+  }
+  to {
+    background: limegreen;
+    top: -500;
+    left: -500;
+  }
+}
+
+#section-3 p {
+  transition: all 3s ease-out;
+}
+
+#section-3 p.active {
+  color: blue;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  opacity: 1;
+}
