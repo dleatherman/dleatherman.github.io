@@ -24,7 +24,8 @@ img {
 
 .absolute__window {
   position: absolute;
-  top: 30px;
+  top: 200%;
+  transition: all 5s 2s ease-in-out;
 }
 
 .border__dotted {
@@ -41,4 +42,8 @@ img {
 
 .border__green {
   border: 2px solid green;
+}
+
+.active {
+  background-color: green;
 }
