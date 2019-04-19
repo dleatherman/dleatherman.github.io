@@ -14,7 +14,7 @@
       }
 
       fetch(
-         `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${APIKEY}&q=Brooklyn%2C%20NY`, {
+         `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${APIKEY}&q=Brooklyn%2C%20NY`, {
             mode: 'cors'
          })
          .then(response => {
@@ -40,7 +40,7 @@
       let formattedData = '';
 
       fetch(
-         `http://dataservice.accuweather.com/currentconditions/v1/${loc}?apikey=${APIKEY}&details=true`, {
+         `https://dataservice.accuweather.com/currentconditions/v1/${loc}?apikey=${APIKEY}&details=true`, {
             mode: 'cors'
          })
          .then(response => {
