@@ -8,17 +8,24 @@
          // gives us all the url parameters
          urlParams = new URLSearchParams(window.location.search),
          // searches for a specific parameter called 'username' and assigns it to a variable
-         usernameParam = urlParams.get('username');
+         usernameParam = urlParams.get('u');
 
    // Specify what happens when someone searches
    // Make the API call, e is the form submit object
-   const getGithubInfo = e => {
+   const getGithubInfo = event => {
 
       // this if statement allows us to call the action without submitting the form
-      if (e) {
+      if (event) {
          // Keep the form from refreshing the page if called from a submit
-         e.preventDefault();
+         event.preventDefault();
       }
+
+      /*
+
+         fetch()
+            .then()
+            .catch()
+      */
 
       // Add in the value from the form
       fetch(`https://api.github.com/users/${username.value}`)
@@ -27,6 +34,7 @@
          // do something with the data
          .then(data => {
             // set up a variable we can add more things into it and eventually add the value in the page
+            console.log(data);
             let formattedData = '';
             // A weird way to handle the error, message doesn't exist unless there is an error in the API call
             if (data.message) {
@@ -36,9 +44,11 @@
                // console.log(data);
                githubForm.classList += ' hidden';
                formattedData += `<a href="${data.html_url}">`;
-               formattedData += `<img src="${data.avatar_url}" class="avatar"><br>`;
+                  formattedData += `<img src="${data.avatar_url}" class="avatar"><br>`;
                formattedData += `</a>`;
-               formattedData += `Name: ${data.name}<br>`;
+               if (data.name) {
+                  formattedData += `Name: ${data.name}<br>`;
+               }
                formattedData += `Followers: ${data.followers}<br>`;
                formattedData += `Following: ${data.following}<br>`;
                formattedData += `Public Repos: ${data.public_repos}<br>`;
@@ -79,7 +89,5 @@
       userInput.value = usernameParam;
       getGithubInfo();
    }
-
-
 
 }());

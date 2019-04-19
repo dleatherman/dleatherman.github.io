@@ -60,10 +60,10 @@ input {
 
 
 ::selection {
-  background: #0000FF; /* WebKit/Blink Browsers */
+  background: #0000FF.hidden; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #0000FF; /* Gecko Browsers */
+  background: #0000FF.hidden; /* Gecko Browsers */
 }
 
 
