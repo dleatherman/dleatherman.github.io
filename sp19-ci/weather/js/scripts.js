@@ -14,7 +14,7 @@
       }
 
       fetch(
-         `http://dataservice.accuweather.com/locations/v1/postalcodes/search?apikey=${APIKEY}&q=11215`, {
+         `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${APIKEY}&q=Brooklyn%2C%20NY`, {
             mode: 'cors'
          })
          .then(response => {
@@ -40,7 +40,7 @@
       let formattedData = '';
 
       fetch(
-         `http://dataservice.accuweather.com/currentconditions/v1/${loc}?apikey=${APIKEY}`, {
+         `http://dataservice.accuweather.com/currentconditions/v1/${loc}?apikey=${APIKEY}&details=true`, {
             mode: 'cors'
          })
          .then(response => {
@@ -51,8 +51,13 @@
             }
          })
          .then(data => {
+            let speed = data[0].Wind.Speed.Imperial.Value;
             if (data) {
-               formattedData += `${data[0].WeatherText}`;
+               formattedData += `${speed} mph`;
+               document.body.classList += 'animated';
+               document.body.setAttribute('style', `-webkit-animation-duration: ${speed}s`);
+               document.body.setAttribute('style', `-moz-animation-duration: ${speed}s`);
+               document.body.setAttribute('style', `animation-duration: ${speed}s`);
             } else {
                formattedData += 'No data!';
             }
