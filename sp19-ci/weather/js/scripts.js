@@ -11,7 +11,7 @@
       }
 
       // Add in the value from the form
-      fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey${APIKEY}&q=New York`)
+      fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey${APIKEY}&q=New York`)
          // convert it to readable data
          .then(response => response.json())
          // do something with the data
