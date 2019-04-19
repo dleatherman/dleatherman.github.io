@@ -8,12 +8,12 @@ let rms;
 let colors;
 
 // play with these to get a sense of what's going on:
-let fund = 0.001; // the speed of the central sine
+let fund = 0.06; // the speed of the central sine
 let ratio = 1; // what multiplier for speed is each additional sine?
 let alpha = 255; // how opaque is the tracing system
 
 let drawColor;
-let drawSize = 5;
+let drawSize = 15;
 
 function preload() {
    song = loadSound('/audio/gods-plan.mp3');
@@ -22,7 +22,7 @@ function preload() {
 function setup() {
    createCanvas(windowWidth, windowHeight);
 
-   rad = height / 4; // compute radius for central circle
+   rad = 200; // compute radius for central circle
    background(255); // clear the screen
 
    analyzer = new p5.Amplitude();
@@ -33,7 +33,7 @@ function setup() {
 
    colors = [color('#feeb79'), color('#101ea1'), color('#f835f8'), color('#232822'), color('#a891e9')];
 
-   drawColor = color('#1d1d1d');
+   drawColor = getRandomColor();
 
    for (let i = 0; i < sines.length; i++) {
       sines[i] = PI; // start EVERYBODY facing NORTH
@@ -52,8 +52,8 @@ function draw() {
 
       for (let i = 0; i < sines.length; i++) {
          let erad = 0;
-         stroke(drawColor);
-         strokeWeight(5);
+         stroke(drawColor.levels[0], drawColor.levels[1], drawColor.levels[2], (alpha / 12));
+         strokeWeight(15);
          noFill();
          erad = 1.0 * (1.0 - float(i) / sines.length); // pen width will be related to which sine
 
