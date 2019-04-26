@@ -1,12 +1,10 @@
 html {
-   background: yellow;
    height: 100%;
 }
 html, body {
    background: #000;
-   color: #fff;
    font-family: 'Karla', sans-serif;
-   font-size: 52px;
+   font-size: 16px;
 }
 
 body {
@@ -18,91 +16,19 @@ body {
    text-align: center;
 }
 
-body.animated {
-	background: linear-gradient(-45deg, #0000FF, #33E9FF);
-	background-size: 400% 400%;
-	-webkit-animation-name: animateBackground;
-	-moz-animation-name: animateBackground;
-	animation-name: animateBackground;
-	-webkit-animation-iteration-count: infinite;
-	-moz-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-}
-
 img {
    height: auto;
    max-width: 100%;
 }
 
-img.avatar {
-   border-radius: 75px;
-   height: auto;
-   max-width: 150px;
-}
-
-input {
-   color: #313131;
-}
-
-.hidden {
-   display: none;
-}
-
-.github-info {
-   font-size: 3rem;
-   line-height: 1.6;
-   padding: 1rem;
-}
-
-#refresh {
-   padding: 1rem;
-}
-#refresh:hover {
-   cursor: pointer;
+input, option {
+	color: #000;
 }
 
 
 ::selection {
-  background: #0000FF.hidden; /* WebKit/Blink Browsers */
+  background: #0000FF; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #0000FF.hidden; /* Gecko Browsers */
-}
-
-
-
-@-webkit-keyframes animateBackground {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes animateBackground {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@keyframes animateBackground {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+  background: #0000FF; /* Gecko Browsers */
 }
