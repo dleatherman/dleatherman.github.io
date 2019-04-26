@@ -3,7 +3,7 @@
    const APIKEY = '53f978ba680e6656fa6ae8444295da63';
 
    window.onload = () => {
-      fetch(`http://api.musixmatch.com/ws/1.1/?apiKey=${APIKEY}`, {
+      fetch(`https://api.musixmatch.com/ws/1.1/?apiKey=${APIKEY}`, {
          mode: 'cors'
       })
          .then(response => {
