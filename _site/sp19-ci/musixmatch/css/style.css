@@ -25,6 +25,14 @@ input, option {
 	color: #000;
 }
 
+ul {
+	color: #fff;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+
 
 ::selection {
   background: #0000FF; /* WebKit/Blink Browsers */
