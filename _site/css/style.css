@@ -12,6 +12,7 @@ body {
    display: flex;
    justify-content: center;
    min-height: 100%;
+   overflow: auto;
 }
 
 img {
@@ -26,8 +27,11 @@ a {
 
 ul,
 ol {
+   display: flex;
+   flex-direction: column;
    list-style-type: none;
    margin: 0;
+   max-height: 100vh;
    padding: 0;
    width: 100%;
 }
@@ -43,9 +47,11 @@ ol > li {
 }
 
 ul > li a,
-ol > li a {
+ol > li a,
+ul > li a h2 {
    display: flex;
    padding: 3rem;
+   width: 100%;
 }
 
 ul > li:hover,
