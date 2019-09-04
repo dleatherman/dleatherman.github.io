@@ -8,7 +8,10 @@ html, body {
 }
 
 body {
-  min-height: 100%;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   min-height: 100%;
 }
 
 img {
@@ -21,13 +24,43 @@ a {
    text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
    list-style-type: none;
    margin: 0;
    padding: 0;
+   width: 100%;
 }
 
 ul > li,
 ol > li {
-  margin-top: 1rem;
+   background: rgba(255,255,255,0.6);
+   border: 1rem solid #000;
+   display: flex;
+   margin: 1rem;
+   padding: 0;
+   text-transform: uppercase;
+}
+
+ul > li a,
+ol > li a {
+   display: flex;
+   padding: 3rem;
+}
+
+ul > li:hover,
+ol > li:hover {
+   background: rgba(255,255,255,0.1);
+   border-color: #fff;
+   color: #fff;
+   cursor: pointer;
+}
+
+ul > li.inactive,
+ol > li.inactive {
+   background: rgba(0,0,0,0);
+}
+ul > li.inactive a:hover,
+ol > li.inactive a:hover {
+   cursor: not-allowed;
 }
