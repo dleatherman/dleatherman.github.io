@@ -5,7 +5,8 @@
       currencyForm = document.querySelector('#fixer__form'),
       fromCurrency = document.querySelector('#currency__from'),
       toCurrency = document.querySelector('#currency__to'),
-      fromAmount = document.querySelector('#from__amount');
+      fromAmount = document.querySelector('#from__amount'),
+      finalValue = document.querySelector('#final__value');
 
    const getFixerRates = (event) => {
 
@@ -17,13 +18,16 @@
          .then(response => response.json())
          .then(data => {
             const exchangeRates = data.rates;
+            let value = (parseInt(fromAmount.value) / exchangeRates[fromCurrency.value]) * exchangeRates[toCurrency.value];
+
+            finalValue.innerHTML = `${value} ${toCurrency.value}`;
 
             // Convert to Euros by dividing value / fromCurrency rate
             // Convert to currency by multiplying Euro value by toCurrency rate
 
             // console.log(exchangeRates[fromCurrency.value]);
             // console.log(exchangeRates[toCurrency.value]);
-            console.log(fromCurrency.value, toCurrency.value, fromAmount.value);
+            // console.log(fromCurrency.value, toCurrency.value, fromAmount.value);
          })
          .catch(error => console.error(error));
    };

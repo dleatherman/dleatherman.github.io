@@ -33,6 +33,12 @@ ul {
 }
 
 
+#final__value {
+   color: #fff;
+   font-size: 4rem;
+   margin: 3rem;
+}
+
 
 ::selection {
   background: #0000FF; /* WebKit/Blink Browsers */

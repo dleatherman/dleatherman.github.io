@@ -16,17 +16,20 @@
 
 <body>
 
-  <form id="fixer__form">
+  <form id="fixer__form" class="pure-form">
     <select name="currency__from" id="currency__from">
-      <option value="USD">USD</option>
-    </select>
-    <select name="currency__to" id="currency__to">
       <option value="USD">USD</option>
       <option value="HKD">HKD</option>
     </select>
-    <input type="number" id="from__amount">
-    <button>Convert</button>
+    <select name="currency__to" id="currency__to">
+      <option value="HKD">HKD</option>
+      <option value="USD">USD</option>
+    </select>
+    <input type="text" id="from__amount" autocomplete="off">
+    <button class="pure-button">Convert</button>
   </form>
+
+  <div id="final__value"></div>
 
   <script src="js/scripts.js"></script>
 </body>
