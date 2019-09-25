@@ -1,0 +1,84 @@
+/* 
+   Colors: red, green, blue, pink
+   Styles: rounded, ellipse
+*/
+
+body {
+   /* align-items: center;
+   display: flex;
+   justify-content: center; */
+}
+
+header {
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+}
+
+header h1 {
+   margin: 0;
+}
+
+header h1 a {
+   color: #333;
+}
+
+.button {
+   background: #eee;
+   border: 1px solid #333;
+   border-radius: 3px;
+   color: #333;
+   display: block;
+   margin: 0 20px;
+   padding: 1rem 0.5rem;
+   text-align: center;
+   text-decoration: none;
+}
+
+.button:hover {
+   background: #333;
+   border-color: #eee;
+   color: #eee;
+   /* box-shadow: 0 2px 2px #000; */
+}
+
+.outer__wrapper {
+   align-items: center;
+   display: flex;
+   flex-flow: row wrap;
+   height: 100vh;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.el {
+   height: 50px;
+   width: 50px;
+}
+
+.red {
+   background: red;
+   /* margin-top: -15%; */
+   opacity: 0.85;
+}
+
+.green {
+   background: green;
+   /* margin-top: 10%; */
+}
+
+.blue {
+   background: blue;
+}
+
+.pink {
+   background: pink;
+}
+
+.rounded {
+   border-radius: 10px;
+}
+
+.ellipse {
+   border-radius: 50%;
+}
