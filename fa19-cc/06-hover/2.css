@@ -1,0 +1,77 @@
+body {
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   min-height: 100vh;
+}
+h1 {
+   font-size: 8rem;
+   text-align: center;
+   transition: transform 3s ease-in-out;
+}
+
+h1 div {
+   height: 0;
+   width: 0;
+   transition: all 3s ease-in-out;
+}
+
+h1:hover {
+   color: #ff0000;
+   transform: rotate(-90deg);
+}
+
+h1:hover div {
+   background-color: #000;
+   display: block;
+   height: 50px;
+   width: 50px;
+}
+
+h1:hover div:first-child {
+   -webkit-animation: spin 1s infinite linear;
+   animation: spin 1s infinite linear;
+}
+h1:hover div:nth-child(2) {
+   -webkit-animation: spin 1s 3s infinite linear;
+   animation: spin 1s 3s infinite linear;
+}
+h1:hover div:nth-child(3) {
+   -webkit-animation: spin 10s 4s infinite linear;
+   animation: spin 10s 4s infinite linear;
+}
+h1:hover div:nth-child(4) {
+   -webkit-animation: spin 2s 4s infinite linear alternate;
+   animation: spin 2s 4s infinite linear alternate;
+}
+h1:hover div:nth-child(5) {
+   -webkit-animation: spin 2s 5s infinite ease-in-out;
+   animation: spin 2s 5s infinite ease-in-out;
+}
+h1:hover div:last-child {
+   -webkit-animation: spin 1s 10s infinite linear;
+   animation: spin 1s 10s infinite linear;
+}
+
+/* h1 div:hover {
+   -webkit-animation: spin 1s infinite linear;
+   animation: spin 1s infinite linear;
+} */
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+@-webkit-keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
