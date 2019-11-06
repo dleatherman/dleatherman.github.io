@@ -1,0 +1,17 @@
+html {
+   background: #000;
+   height: 100%;
+}
+
+body {
+   background: #fff;
+   font-family: 'Karla', sans-serif;
+   min-height: 100%;
+}
+
+p,
+h1 {
+   font-family: 'Space Mono', monospace;
+   margin: 0;
+   padding: 0;
+}
