@@ -16,7 +16,10 @@ body {
    display: flex;
    flex-direction: column;
    text-align: center;
-   width: 30vw;
+   @media (min-width: 40em) {
+      margin: 0 auto;
+      width: 30vw;
+   }
 }
 
 form {
