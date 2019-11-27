@@ -23,36 +23,14 @@ body {
 }
 
 form {
-   align-items: stretch;
-   display: flex;
-   justify-content: space-between;
    padding: 1rem 0;
-}
-
-form input{
-   flex: 3;
-   margin-right: 5px;
-}
-form button {
-   flex: 1;
 }
 
 ul#todo__list {
    text-align: left;
 }
 
-li.incomplete {
-
-}
-
 li.complete {
    font-weight: bold;
    text-decoration: line-through;
-}
-
-p,
-h1 {
-   font-family: 'Space Mono', monospace;
-   margin: 0;
-   padding: 0;
 }
