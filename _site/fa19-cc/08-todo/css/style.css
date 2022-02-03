@@ -1,0 +1,36 @@
+html {
+   background: #000;
+   height: 100%;
+}
+
+body {
+   align-items: center;
+   background: #fff;
+   display: flex;
+   font-family: 'Karla', sans-serif;
+   justify-content: center;
+   min-height: 100%;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   @media (min-width: 40em) {
+      margin: 0 auto;
+      width: 30vw;
+   }
+}
+
+form {
+   padding: 1rem 0;
+}
+
+ul#todo__list {
+   text-align: left;
+}
+
+li.complete {
+   font-weight: bold;
+   text-decoration: line-through;
+}
